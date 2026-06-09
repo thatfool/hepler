@@ -4,6 +4,14 @@ Hepler is a small LLM integration for your shell. Press a key combination (defau
 
 It uses LLMs via the OpenAI API, and supports many online providers, as well as local options such as Ollama or LM Studio.
 
+![WEBP animation showing example uses](/docs/examples.webp)
+
+## Source Code
+
+This project lives on codeberg at https://codeberg.org/snokatt/hepler
+
+There is a mirror on GitHub at https://github.com/thatfool/hepler
+
 ## Installation
 
 ### Prerequisites
