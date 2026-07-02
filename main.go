@@ -34,14 +34,16 @@ func usage(w *os.File) {
 Usage:
   hepler init <bash|zsh|fish>        Print the shell integration snippet for the given shell
   hepler version                     Print the version
- 
+
 For integration:
   hepler edit [--yes]                Read a command line on stdin, print the result on stdout
 
 Configuration (environment):
-  HEPLER_OPENAI_API_BASE   Base URL of an OpenAI-compatible endpoint
-  HEPLER_OPENAI_API_KEY    API key for that endpoint (optional if not required)
-  HEPLER_MODEL_NAME        Qualified name of the model to use
+  HEPLER_OPENAI_API_BASE        Base URL of an OpenAI-compatible endpoint
+  HEPLER_OPENAI_API_KEY         API key for that endpoint (optional if not required)
+  HEPLER_OPENAI_API_KEY_CMD     Shell command whose output is the API key (takes precedence)
+  HEPLER_OPENAI_API_KEY_FILE    Path to a file containing the API key
+  HEPLER_MODEL_NAME             Qualified name of the model to use
 
 Shell setup, e.g. for zsh, add to ~/.zshrc:
   source <(hepler init zsh)

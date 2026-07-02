@@ -5,7 +5,7 @@
 function hepler-widget
     # string collect keeps multi-line output as a single value.
     set -l out (commandline | hepler edit | string collect)
-    if test $status -eq 0 -a -n "$out"
+    if test $pipestatus[2] -eq 0 -a -n "$out"
         commandline -r -- $out
     end
 end

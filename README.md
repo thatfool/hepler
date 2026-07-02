@@ -43,8 +43,8 @@ LLM access is configured through environment variables:
 
 To avoid putting your API key directly in an environment variable, you can supply it in one of two other ways. In order of precedence:
 
-- `HEPLER_OPENAI_API_KEY_CMD` — a shell command whose output is the key, e.g. `op read op://vault/hepler/key`. 
-- `HEPLER_OPENAI_API_KEY_FILE` — a path to a file containing the key. T
+- `HEPLER_OPENAI_API_KEY_CMD` — a shell command whose output is the key, e.g. `op read op://vault/hepler/key`.
+- `HEPLER_OPENAI_API_KEY_FILE` — a path to a file containing the key.
 
 ## License
 
