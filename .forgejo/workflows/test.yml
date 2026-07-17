@@ -7,7 +7,7 @@ on:
 
 jobs:
   test:
-    runs-on: tanuki
+    runs-on: codeberg-small
     container:
       image: golang:1
     steps:
