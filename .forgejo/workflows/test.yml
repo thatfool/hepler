@@ -1,0 +1,21 @@
+name: test
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: tanuki
+    container:
+      image: golang:1
+    steps:
+      - name: Check out
+        run: |
+          git clone "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@${GITHUB_SERVER_URL#*://}/${{ github.repository }}.git" .
+          git checkout "$GITHUB_SHA"
+      - name: Vet
+        run: go vet ./...
+      - name: Test
+        run: go test ./...
